@@ -1,0 +1,118 @@
+@{
+    ViewData["BodyClass"] = "login-page";
+}
+
+@model List<UserPortfolio>
+
+<div class="login-page">
+    <div class="login-container">
+        <div class="home-box">
+            <h1>Stock Portfolio Dashboard</h1>
+            <p><strong>Account Username:</strong> @ViewBag.Username</p>
+            <p><strong>Total Portfolio Value:</strong> $@ViewBag.TotalPortfolioValue</p>
+            <p><strong>Total Cash:</strong> $@ViewBag.Cash</p>
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @if (!string.IsNullOrEmpty(ViewBag.Error))
+            {
+                <div class="alert alert-danger">@ViewBag.Error</div>
+            }
+
+            @if (Model != null && Model.Any())
+            {
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Ticker</th>
+                            <th>Shares</th>
+                            <th>Price</th>
+                            <th>Total Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model) //var item in Model
+                        {
+                            <tr>
+                                <td>@item.Stock.CompanyName</td>
+                                <td>@item.Stock.TickerSymbol</td>
+                                <td>@item.SharesOwned</td>
+                                <td>$@item.Stock.CurrentPrice</td>
+                                <td>$@item.PortfolioValue</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <p>No stocks in portfolio.</p>
+            }
+
+            <h3>Buy/Sell Shares In Portfolio</h3>
+            <form id="stockSearchForm" method="post" action="@Url.Action("GetStockResults", "Account")">
+                <label for="ticker">Search for a Stock:</label>
+                <input type="text" id="ticker" name="ticker" placeholder="Enter Stock Ticker" required />
+                <button type="submit">Get Stock Price</button>
+            </form>
+
+
+            @if (TempData["CompanyName"] != null && TempData["LastSalePrice"] != null)
+            {
+                <p><strong>Company Name:</strong> @TempData["CompanyName"]</p>
+                <p><strong>Ticker Symbol:</strong> @TempData["TickerSymbol"]</p>
+                <p><strong>Price Per Share:</strong> $@TempData["LastSalePrice"]</p>
+
+                //buy stock button
+                <form method="post" action="@Url.Action("BuyStock", "Account")">
+                    <input type="hidden" name="ticker" value="@TempData["TickerSymbol"]" />
+                    <input type="number" name="shares" min="1" placeholder="Shares to Buy" required />
+                    <button type="submit" class="btn btn-primary">Buy</button>
+                </form>
+
+                //sell stock button
+                <form method="post" action="@Url.Action("SellStock", "Account")">
+                    <input type="hidden" name="ticker" value="@TempData["TickerSymbol"]" />
+                    <input type="number" name="shares" min="1" placeholder="Shares to Sell" required />
+                    <button type="submit" class="btn btn-danger">Sell</button>
+                </form>
+            }
+        </div>
+    </div>
+</div>
+
+
+
+@* @section Scripts {
+    <script>
+        document.getElementById("stockSearchForm").addEventListener("submit", async function (event) {
+            event.preventDefault(); // prevents form from reloading the page
+
+            let ticker = document.getElementById("ticker").value.trim();
+            if (!ticker) {
+                alert("Please enter a stock ticker.");
+                return;
+            }
+
+            try {
+                let response = await fetch("/Account/GetStockResults", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded"
+                    },
+                    body: `ticker=${encodeURIComponent(ticker)}`
+                });
+
+                if (response.ok) {
+                    let htmlContent = await response.text();
+                    document.getElementById("stockResult").innerHTML = htmlContent; // show stock data without reloading page
+                } else {
+                    document.getElementById("stockResult").innerHTML = "<p>Error fetching stock data.</p>";
+                }
+            } catch (error) {
+                console.error("Fetch error:", error);
+                document.getElementById("stockResult").innerHTML = "<p>Failed to fetch stock data.</p>";
+            }
+        });
+    </script>
+} *@

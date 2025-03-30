@@ -1,0 +1,31 @@
+@model Stock
+
+<h2>Buy/Sell Stock</h2>
+
+<form method="post" action="@Url.Action("EditStock", "Account")">
+    <input type="hidden" name="Id" value="@Model.StockId" />
+    
+    <div class="form-group">
+        <label for="CompanyName">Stock Name</label>
+        <input type="text" class="form-control" name="CompanyName" value="@Model.CompanyName" readonly />
+    </div>
+
+    <div class="form-group">
+        <label for="TickerSymbol">Ticker Symbol</label>
+        <input type="text" class="form-control" name="TickerSymbol" value="@Model.TickerSymbol" readonly />
+    </div>
+
+    @* <div class="form-group">
+        <label for="NumberOfShares">Number of Shares</label>
+        <input type="number" class="form-control" name="NumberOfShares" value="@Model.NumberOfShares" required />
+    </div> *@
+
+    <div class="form-group">
+        <label for="CurrentPrice">Current Price</label>
+        <input type="number" class="form-control" name="CurrentPrice" value="@Model.CurrentPrice" step="0.01" readonly />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>
+
+<a href="@Url.Action("Dashboard", "Account")" class="btn btn-secondary">Back to Dashboard</a>
