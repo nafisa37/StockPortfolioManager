@@ -110,30 +110,30 @@ public class AccountController : Controller
     {
         var username = User.FindFirst("Username")?.Value;
 
-        // Get the user from the database using their username
+        //get user from database
         var user = _context.UserAccounts.FirstOrDefault(u => u.Username == username);
         if (user == null)
         {
             return RedirectToAction("Login");
         }
 
-        // Retrieve the user's portfolio, including stock details
+        // get user's portfolio info
         var portfolio = _context.UserPortfolio
-            .Where(up => up.UserId == user.UserId)  // Filter by the current user's ID
-            .Include(up => up.Stock)           // Include stock data for each portfolio entry
+            .Where(up => up.UserId == user.UserId)  //filter by user ID
+            .Include(up => up.Stock)
             .ToList();
 
-        // Optionally calculate the total portfolio value
+        //calculate portfolio value and pass to view
         decimal totalPortfolioValue = portfolio.Sum(up => up.PortfolioValue);
 
-        // Pass portfolio data and total value to the view
+
         ViewBag.Cash = user.Cash;
         ViewBag.Username = user.Username;
         ViewBag.TotalPortfolioValue = totalPortfolioValue;
 
         ViewBag.Error = TempData["Error"];
 
-        return View(portfolio);  // Pass the portfolio to the view
+        return View(portfolio);
     }
 
     [HttpPost]
@@ -178,12 +178,12 @@ public class AccountController : Controller
             return RedirectToAction("Dashboard");
         }
 
-        // Check if stock exists in database
+        // see if stock is in database
         var stock = _context.Stocks.FirstOrDefault(s => s.TickerSymbol == symbol);
         //Console.WriteLine($"Stock found: {stock.TickerSymbol}");
         if (stock == null)
         {
-            // Add new stock to database
+            //add new stock to database
             Console.WriteLine("ENTERING ADDING NEW STOCK CODE");
             stock = new Stock { TickerSymbol = symbol, CompanyName = companyName, CurrentPrice = currentPrice };
             _context.Stocks.Add(stock);
@@ -191,7 +191,7 @@ public class AccountController : Controller
         }
         else
         {
-            // Update the stock price to the latest API call value
+            //update stock price in database to latest
             Console.WriteLine("UPDATING STOCK PRICE IN DATABASE");
             stock.CurrentPrice = currentPrice;
             _context.Stocks.Update(stock);
@@ -306,7 +306,6 @@ public class AccountController : Controller
         }
         catch (Exception ex)
         {
-            // Handle errors, such as API failures or deserialization issues
             ModelState.AddModelError("", $"Error fetching stock data: {ex.Message}");
         }
 

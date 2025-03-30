@@ -87,7 +87,7 @@ namespace StockPortfolioApp.Controllers
 
             HttpContext.SignOutAsync();  //logs the user out after deleting account
 
-            // Redirects to home page
+            // redirects to home page
             ViewBag.Message = "Your account has been deleted.";
             return RedirectToAction("Index", "Home");
         }
