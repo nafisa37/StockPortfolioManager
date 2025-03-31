@@ -1,9 +1,30 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using DotNetEnv;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
+// try{
+//     var root = Directory.GetCurrentDirectory();
+//     var dotenv = Path.Combine(root, ".env");
+//     DotEnv.Load(dotenv);
+// }
+// catch (Exception ex){
+//     Console.WriteLine($"error with .env file: {ex.Message}");
+// }
+
+// var config = new ConfigurationBuilder()
+//     .AddEnvironmentVariables()
+//     .Build();
+
+// string apiKey = config["API_KEY"];
+Env.Load();
+// string apiKey = Environment.GetEnvironmentVariable("API_Key");
+var connectionString = Environment.GetEnvironmentVariable("MSSQL_TCP_URL");
+
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
+//builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -13,7 +34,6 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 //builder.Services.AddSingleton<StockService>(); //for API calls
 builder.Services.AddHttpClient();
 builder.Services.AddScoped<APIHelper>();  // Register StockApiService
-
 
 builder.Logging.ClearProviders();
 builder.Logging.AddConsole(); // Ensure logs appear in the terminal

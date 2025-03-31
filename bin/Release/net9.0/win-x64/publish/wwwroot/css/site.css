@@ -1,0 +1,132 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+.login-page{
+  background-image:url('/images/login-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container {
+  max-width: 1000px;
+  padding: 10px;
+  border:none;
+  height: 100%;
+}
+
+.login-box{
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.login-box h1 {
+  font-size: 2rem;
+  font-weight: 470;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px; 
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.form-control {
+  border: 1px solid grey;
+  border-radius: 4px;
+  width: 440px;
+}
+
+label {
+  white-space: nowrap;  /* stops Confirm Password from being on two diff lines*/
+}
+
+.footer-container{
+  text-align: center;
+}
+
+.home-box{
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.home-box h1 {
+  font-size: 2rem;
+  font-weight: 470;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.lead{
+  font-weight: 350;
+}
+
+.text-success, .text-danger { /*keeps errors on one line */
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.inline-messages{
+  white-space: nowrap;
+}
+
+.navbar-right li:last-child {
+  margin-left: 20px; /*adds space before Log Out Button*/
+}
+
+.table {
+  border: 2px solid black; /* black border around table */
+}
+
+.table th, .table td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+

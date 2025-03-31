@@ -245,3 +245,6 @@ C:\Users\nafis\VSCode Projects\FranklinTempleton\StockPortfolioApp\bin\Debug\net
 C:\Users\nafis\VSCode Projects\FranklinTempleton\StockPortfolioApp\bin\Debug\net9.0\publish\StockPortfolioApp.deps.json
 C:\Users\nafis\VSCode Projects\FranklinTempleton\StockPortfolioApp\bin\Debug\net9.0\publish\StockPortfolioApp.runtimeconfig.json
 C:\Users\nafis\VSCode Projects\FranklinTempleton\StockPortfolioApp\bin\Debug\net9.0\publish\StockPortfolioApp.staticwebassets.endpoints.json
+C:\Users\nafis\VSCode Projects\FranklinTempleton\StockPortfolioApp\obj\Debug\net9.0\StockPortfolioApp.sourcelink.json
+C:\Users\nafis\VSCode Projects\FranklinTempleton\StockPortfolioApp\bin\Debug\net9.0\DotNetEnv.dll
+C:\Users\nafis\VSCode Projects\FranklinTempleton\StockPortfolioApp\bin\Debug\net9.0\Sprache.dll

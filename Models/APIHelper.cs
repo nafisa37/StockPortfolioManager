@@ -11,9 +11,11 @@ public class APIHelper
     {
 
         string apiUrl = $"https://yahoo-finance15.p.rapidapi.com/api/v1/markets/quote?ticker={ticker}&type=STOCKS";
+        string apiKey = Environment.GetEnvironmentVariable("API_Key");
+        Console.WriteLine($"API Key: {apiKey}"); 
         var requestMessage = new HttpRequestMessage(HttpMethod.Get, apiUrl);
         
-        requestMessage.Headers.Add("X-RapidAPI-Key", "b154686386msh5875803514f1e8bp1a1bc6jsneef210b0a56a");
+        requestMessage.Headers.Add("X-RapidAPI-Key", apiKey);
         requestMessage.Headers.Add("X-RapidAPI-Host", "yahoo-finance15.p.rapidapi.com");
 
         var client = _httpClientFactory.CreateClient();
