@@ -1,0 +1,30 @@
+{
+    "name": "Stock Portfolio Management App",
+    "description": "Stock portfolio management website built with .NET and C#",
+    "repository": "https://github.com/nafisa37/StockPortfolioManager",
+    "keywords": [
+        "dotnet",
+        "aspnetcore"
+    ],
+    "buildpacks": [
+        {
+            "url": "heroku/dotnet"
+        }
+    ],
+    "env": {
+        "MSSQL_TCP_URL=Server": {
+            "description": "Database connection string for MSSQL add-on",
+            "required": true
+        },
+        "API_Key": {
+            "description": "RapidAPI Key",
+            "required": true
+        }
+    },
+    "addons": [
+        "mssql:hobby-dev"
+    ],
+    "scripts": {
+        "postdeploy": "dotnet ef database update"
+    }
+}

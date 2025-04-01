@@ -17,69 +17,69 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = StockPortfolioApp
 build_property.RootNamespace = StockPortfolioApp
-build_property.ProjectDir = c:\Users\nafis\VSCode Projects\FranklinTempleton\StockPortfolioApp\
+build_property.ProjectDir = C:\Users\nafis\VSCode Projects\FranklinTempleton\StockPortfolioApp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = c:\Users\nafis\VSCode Projects\FranklinTempleton\StockPortfolioApp
+build_property.MSBuildProjectDirectory = C:\Users\nafis\VSCode Projects\FranklinTempleton\StockPortfolioApp
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[c:/Users/nafis/VSCode Projects/FranklinTempleton/StockPortfolioApp/Views/Account/Dashboard.cshtml]
+[C:/Users/nafis/VSCode Projects/FranklinTempleton/StockPortfolioApp/Views/Account/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxEYXNoYm9hcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/nafis/VSCode Projects/FranklinTempleton/StockPortfolioApp/Views/Account/EditStock.cshtml]
+[C:/Users/nafis/VSCode Projects/FranklinTempleton/StockPortfolioApp/Views/Account/EditStock.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxFZGl0U3RvY2suY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/nafis/VSCode Projects/FranklinTempleton/StockPortfolioApp/Views/Account/Login.cshtml]
+[C:/Users/nafis/VSCode Projects/FranklinTempleton/StockPortfolioApp/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/nafis/VSCode Projects/FranklinTempleton/StockPortfolioApp/Views/Account/Registration.cshtml]
+[C:/Users/nafis/VSCode Projects/FranklinTempleton/StockPortfolioApp/Views/Account/Registration.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3RyYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/nafis/VSCode Projects/FranklinTempleton/StockPortfolioApp/Views/Home/AboutMe.cshtml]
+[C:/Users/nafis/VSCode Projects/FranklinTempleton/StockPortfolioApp/Views/Home/AboutMe.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dE1lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/nafis/VSCode Projects/FranklinTempleton/StockPortfolioApp/Views/Home/Index.cshtml]
+[C:/Users/nafis/VSCode Projects/FranklinTempleton/StockPortfolioApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/nafis/VSCode Projects/FranklinTempleton/StockPortfolioApp/Views/Home/Profile.cshtml]
+[C:/Users/nafis/VSCode Projects/FranklinTempleton/StockPortfolioApp/Views/Home/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/nafis/VSCode Projects/FranklinTempleton/StockPortfolioApp/Views/Shared/Error.cshtml]
+[C:/Users/nafis/VSCode Projects/FranklinTempleton/StockPortfolioApp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/nafis/VSCode Projects/FranklinTempleton/StockPortfolioApp/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/nafis/VSCode Projects/FranklinTempleton/StockPortfolioApp/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/nafis/VSCode Projects/FranklinTempleton/StockPortfolioApp/Views/Shared/_StockDetailsPartial.cshtml]
+[C:/Users/nafis/VSCode Projects/FranklinTempleton/StockPortfolioApp/Views/Shared/_StockDetailsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TdG9ja0RldGFpbHNQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/nafis/VSCode Projects/FranklinTempleton/StockPortfolioApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/nafis/VSCode Projects/FranklinTempleton/StockPortfolioApp/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/nafis/VSCode Projects/FranklinTempleton/StockPortfolioApp/Views/_ViewImports.cshtml]
+[C:/Users/nafis/VSCode Projects/FranklinTempleton/StockPortfolioApp/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/nafis/VSCode Projects/FranklinTempleton/StockPortfolioApp/Views/_ViewStart.cshtml]
+[C:/Users/nafis/VSCode Projects/FranklinTempleton/StockPortfolioApp/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/nafis/VSCode Projects/FranklinTempleton/StockPortfolioApp/Views/Shared/_Layout.cshtml]
+[C:/Users/nafis/VSCode Projects/FranklinTempleton/StockPortfolioApp/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-b5j10r6ahp

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StockPortfolioApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b5be4d5ce61b75f673b7ff46fec85e9960fe6226")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+530e59a856d26673aad6307d6b02aff6c36e6c34")]
 [assembly: System.Reflection.AssemblyProductAttribute("StockPortfolioApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StockPortfolioApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
