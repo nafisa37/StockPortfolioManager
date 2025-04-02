@@ -1,1 +1,1 @@
-web: pwd ; ls; cd publish/; ./StockPortfolioApp --urls http://*:$PORT
+web: pwd ; ls; cd publish && dotnet StockPortfolioApp.dll --urls http://*:$PORT
