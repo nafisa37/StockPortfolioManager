@@ -23,8 +23,8 @@ Env.Load();
 // string apiKey = Environment.GetEnvironmentVariable("API_Key");
 var connectionString = Environment.GetEnvironmentVariable("MSSQL_TCP_URL");
 
-builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
-//builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString));
+//builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
+builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
